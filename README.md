@@ -1,2 +1,3 @@
-# This repo contains miscellaneous projects.
+# Miscellaneous Projects
+This repo contains miscellaneous data visualization projects.
 https://gspinoza.github.io
