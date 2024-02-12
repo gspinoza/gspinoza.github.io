@@ -1,3 +1,2 @@
-# gspinoza.github.io
-Gabriel Espinoza
+# This repo contains miscellaneous projects.
 https://gspinoza.github.io
