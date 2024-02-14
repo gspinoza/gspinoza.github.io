@@ -1,0 +1,33 @@
+body {
+  background-image: url("background.jpg");
+  background-color: #cccccc;
+  background-image: linear-gradient(white, lightblue, white);
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+.visualContainer {
+  background-color: lightblue;
+  border: 5px solid black;
+  margin: auto;
+  width: 1500px;
+  height: 800px;
+  margin-bottom: 10px;
+}
+
+.findings-container {
+  padding: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+span {
+  font-weight: bolder;
+  font-size: 20px;
+}
