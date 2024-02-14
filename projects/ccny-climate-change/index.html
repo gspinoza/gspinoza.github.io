@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Climate Change Effects</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/fontAwesome.css">
+        <link rel="stylesheet" href="css/hero-slider.css">
+        <link rel="stylesheet" href="css/templatemo-main.css">
+        <link rel="stylesheet" href="css/owl-carousel.css">
+
+        <!-- VEGALITE CDN-->
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.css" integrity="sha256-NAxhqDvtY0l4xn+YVa6WjAcmd94NNfttjNsDmNatFVc=" crossorigin="anonymous" />
+        <link rel="stylesheet" href="team.css">
+
+        <!-- <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> -->
+
+        <!-- including ECharts file -->
+        <script src="js/echarts.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script> 
+        $(function(){
+          $("#includedContent").load("GabrielPCA.html");
+          $("#AsmaVis1").load("Asma1.html");
+          $("#AsmaVis2").load("Asma2.html");
+          $("#AsmaVis3").load("Asma3.html"); 
+        });
+        </script> 
+    </head>
+<!--
+Vanilla Template
+https://templatemo.com/tm-526-vanilla
+-->
+<body>
+
+<!-- NAVIGATION -->
+    <div class="fixed-side-navbar">
+        <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#title"><span>Title</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#intro"><span>Intro</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#Visualization-1"><span>Visualization-1</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#Visualization-2"><span>Visualization-2</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#Visualization-3"><span>Visualization-3</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#Visualization-4"><span>Visualization-4</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#Visualization-5"><span>Visualization-5</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#data-sources"><span>Data Sources</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#team"><span>Our Team</span></a></li>
+        </ul>
+    </div>
+
+<!-- TITLE -->
+    <div class="parallax-content baner-content" id="title">
+        <div class="container">
+            <div class="first-content">
+                <h1>Climate Change Effects on the Productivity of Australian Farms</h1>
+                <span><em>Visualization</em> Spring 2021</span>
+                <div class="primary-button">
+                    <a href="#intro">Explore</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- *** INTRO *** -->
+    <div class="intro-content" id="intro">
+        <h1 class="mb-4 section-title"></h1>
+        <div class="container">
+            <div class="row" style="justify-content: center;">
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <!-- <div class="service-item"> -->
+                                <!-- <p>"As our climate continues to heat up and the impacts of that warming grow more frequent and severe, farmers and farm communities around the world will be increasingly challenged. And US farmers won’t be spared the damage that climate change is already beginning to inflict."</p> -->
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- *** VISUALIZATION 1 *** -->
+    <div class="parallax-content visual1-content" id="Visualization-1">
+        <h1 class="mb-4 section-title">Change in Precipitation</h1>
+        <div class="container" style="max-width: 1450px;">
+            <div class="row" style="justify-content: space-around;">
+                <div class="col-md-6">
+                    <div class="wrapper">
+                    <section id="first-tab-groupMing" class="tabgroup">
+                    <div id="MingVis1Tab">
+                        <div id="MingVis1"></div>
+                        <!-- <p>Info1</p> -->
+                    </div>
+                    <div id="MingVis2Tab">
+                        <div id="MingVis2"></div>
+                        <!-- <p>Info2</p> -->
+                    </div>
+                    <div id="MingVis3Tab">
+                        <div id="MingVis3"></div>
+                        <!-- <p>Info3</p> -->
+                    </div>
+                    </section>
+                    <ul class="tabs clearfix" data-tabgroup="first-tab-groupMing">
+                    <li><a href="#MingVis1Tab" class="active">1991-2000</a></li>
+                    <li><a href="#MingVis2Tab">2001-2010</a></li>
+                    <li><a href="#MingVis3Tab">2011-2020</a></li>
+                    </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="wrapper">
+                    <section id="first-tab-groupMing2" class="tabgroup">
+                    <div id="MingVis4Tab">
+                        <div id="MingVis4"></div>
+                        <!-- <p>Info1</p> -->
+                    </div>
+                    <div id="MingVis5Tab">
+                        <div id="MingVis5"></div>
+                        <!-- <p>Info2</p> -->
+                    </div>
+                    <div id="MingVis6Tab">
+                        <div id="MingVis6"></div>
+                        <!-- <p>Info3</p> -->
+                    </div>
+                    </section>
+                    <ul class="tabs clearfix" data-tabgroup="first-tab-groupMing2">
+                        <li><a href="#MingVis4Tab" class="active">1991-2000</a></li>
+                        <li><a href="#MingVis5Tab">2001-2010</a></li>
+                        <li><a href="#MingVis6Tab">2011-2019</a></li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="justify-content: space-around; padding-top: 50px;">
+                <div class="service-item">
+                    <h4>Why is precipitation important for the productivity of Australian farms?</h4>
+                    <div class="line-dec"></div>
+                    <p>Rain is usually seen as a benefit to crops and fields, but there is an ideal amount of rainfall in any given growing season for most crops. If the average rainfall is much lower or higher than the ideal, it can lead to significant problems, from drowned crops to lower yields. Drought can kill crops and increase erosion, while overly wet weather can cause harmful fungus growth. The higher temperatures lead to more evaporation, so increased precipitation will not necessarily increase the amount of water available for industry.</p>
+                    <p><br></p>
+                    <h4>How does the change of precipitation affect the farms?</h4>
+                    <div class="line-dec"></div>
+                    <p>The Visualization shows that a warming climate will increase the severity of rainfall in Australia, the higher the temperature is, the higher the precipitation is. It also shows that the average temperature is slowly increasing over time.  A warmer climate increase soil evaporation, exacerbating droughts even in the absence of reduced precipitation. Even though the TFP is constantly increasing due to economic growth and advanced technology, but the extreme climate change in precipitation will still affect the TFP.</p>
+                    <h4>What’s trend in precipitation reflect the Australia TFP across all agriculture industries?</h4>
+                    <div class="line-dec"></div>
+                    <p>The visualization above shows that higher precipitation increases Australia's TFP in general. The higher the precipitation, the higher the TFP is. For example, we can see the outliner in the years 1994 and 2002, They have one of the lowest precipitations, because of that, the average TFP across all industries decreased in agricultural production. After researching, I found out that there’s a drought in Australia during 2002-2003, which shows that precipitation is indeed important for farms. Even though the temperature is slowly increasing every year, the precipitation is not increasing, and it has a downward trend in Australia.</p>
+                    <h4>What would the future be if the climax continues to warm and the precipitation continues to decrease?</h4>
+                    <div class="line-dec"></div>
+                    <p>Agriculture is strongly influenced by weather and climate. If the climax keeps changing, it will threaten the established aspects of farming systems. 
+                        Low precipitation and a warm climate can result in dry soil, shallow streams, and shortages of municipal water supplies, which would lead to hunger. Therefore, we must act before it’s too late.
+                        </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- *** VISUALIZATION 2 *** -->
+<div class="visual2-content" id="Visualization-2">
+    <h1 class="mb-4 section-title" style="color: black;">Can Climate Change Affect Hunger in Australia?</h1>
+    <div class="container" style="max-width: 1450px;">
+        <div class="row">
+                <!-- vis 2 -->
+            <div class="col-md-6" style="max-width: 33%;">
+                <div class="wrapper">
+                    <section id="first-tab-group2" class="tabgroup">
+                    <div id="SafwanVis5Tab">
+                        <div id="SafwanVis5"></div>
+                        <!-- <p>Info1</p> -->
+                    </div>
+                    <div id="SafwanVis6Tab">
+                        <div id="SafwanVis6"></div>
+                        <!-- <p>Info2</p> -->
+                    </div>
+                    <div id="SafwanVis7Tab">
+                        <div id="SafwanVis7"></div>
+                        <!-- <p>Info3</p> -->
+                    </div>
+                    <div id="SafwanVis8Tab">
+                        <div id="SafwanVis8"></div>
+                        <!-- <p>Info4</p> -->
+                    </div>
+                    </section>
+                    <ul class="tabs clearfix" data-tabgroup="first-tab-group2">
+                        <li><a href="#SafwanVis5Tab" class="active">1980s</a></li>
+                        <li><a href="#SafwanVis6Tab">1990s</a></li>
+                        <li><a href="#SafwanVis7Tab">2000s</a></li>
+                        <li><a href="#SafwanVis8Tab">2010s</a></li>
+                    </ul>
+                    </div>
+            </div>
+            <!-- Agricultural Productivity Beef -->
+            <div class="col-md-6" style="max-width: 33%;">
+                <div class="wrapper">
+                <section id="first-tab-group" class="tabgroup">
+                <div id="SafwanVis1Tab">
+                    <div id="SafwanVis1"></div>
+                    <!-- <p>Info1</p> -->
+                </div>
+                <div id="SafwanVis2Tab">
+                    <div id="SafwanVis2"></div>
+                    <!-- <p>Info2</p> -->
+                </div>
+                <div id="SafwanVis3Tab">
+                    <div id="SafwanVis3"></div>
+                    <!-- <p>Info3</p> -->
+                </div>
+                <div id="SafwanVis4Tab">
+                    <div id="SafwanVis4"></div>
+                    <!-- <p>Info4</p> -->
+                </div>
+                </section>
+                <ul class="tabs clearfix" data-tabgroup="first-tab-group">
+                <li><a href="#SafwanVis1Tab" class="active">1980s</a></li>
+                <li><a href="#SafwanVis2Tab">1990s</a></li>
+                <li><a href="#SafwanVis3Tab">2000s</a></li>
+                <li><a href="#SafwanVis4Tab">2010s</a></li>
+                </ul>
+                </div>
+            </div>
+            <!-- vis 2.1 -->
+            <div class="col-md-6" style="max-width: 33%;">
+                <div class="wrapper">
+                    <ul class="tabs clearfix" data-tabgroup="first-tab-groupSafwanYears">
+                        <li><a href="#Year1980sTab" class="active">1980s</a></li>
+                        <li><a href="#Year1990sTab">1990s</a></li>
+                        <li><a href="#Year2000sTab">2000s</a></li>
+                        <li><a href="#Year2010sTab">2010s</a></li>
+                        </ul>
+                    <section id="first-tab-groupSafwanYears" class="tabgroup">
+                        <!-- <div class="service-item"> -->
+                            <div id="Year1980sTab">
+                                <div class="wrapper">
+                                    <section id="first-tab-groupSafwan1980s" class="tabgroup">
+                                    <div id="1980s-1">
+                                        <div id="_1980s1"></div>
+                                        <!-- <p>Info1</p> -->
+                                    </div>
+                                    <div id="1980s-2">
+                                        <div id="_1980s2"></div>
+                                        <!-- <p>Info2</p> -->
+                                    </div>
+                                    <div id="1980s-3">
+                                        <div id="_1980s3"></div>
+                                        <!-- <p>Info3</p> -->
+                                    </div>
+                                    <div id="1980s-4">
+                                        <div id="_1980s4"></div>
+                                        <!-- <p>Info4</p> -->
+                                    </div>
+                                    <div id="1980s-5">
+                                        <div id="_1980s5"></div>
+                                        <!-- <p>Info1</p> -->
+                                    </div>
+                                    <div id="1980s-6">
+                                        <div id="_1980s6"></div>
+                                        <!-- <p>Info2</p> -->
+                                    </div>
+                                    <div id="1980s-7">
+                                        <div id="_1980s7"></div>
+                                        <!-- <p>Info3</p> -->
+                                    </div>
+                                    <div id="1980s-8">
+                                        <div id="_1980s8"></div>
+                                        <!-- <p>Info4</p> -->
+                                    </div>
+                                    <div id="1980s-9">
+                                        <div id="_1980s9"></div>
+                                        <!-- <p>Info1</p> -->
+                                    </div>
+                                    <div id="1980s-10">
+                                        <div id="_1980s10"></div>
+                                        <!-- <p>Info2</p> -->
+                                    </div>
+                                    <div id="1980s-11">
+                                        <div id="_1980s11"></div>
+                                        <!-- <p>Info3</p> -->
+                                    </div>
+                                    <div id="1980s-12">
+                                        <div id="_1980s12"></div>
+                                        <!-- <p>Info4</p> -->
+                                    </div>
+                                    </section>
+                                    <ul class="tabs clearfix" data-tabgroup="first-tab-groupSafwan1980s" style="width: 400px;">
+                                    <li><a href="#1980s-1" class="active">January</a></li>
+                                    <li><a href="#1980s-2">February</a></li>
+                                    <li><a href="#1980s-3">March</a></li>
+                                    <li><a href="#1980s-4">April</a></li>
+                                    <li><a href="#1980s-5">May</a></li>
+                                    <li><a href="#1980s-6">June</a></li>
+                                    <li><a href="#1980s-7">July</a></li>
+                                    <li><a href="#1980s-8">August</a></li>
+                                    <li><a href="#1980s-9">September</a></li>
+                                    <li><a href="#1980s-10">October</a></li>
+                                    <li><a href="#1980s-11">November</a></li>
+                                    <li><a href="#1980s-12">December</a></li>
+                                    </ul>
+                                    </div>
+                                <!-- <p>Info1</p> -->
+                            </div>
+                            <div id="Year1990sTab">
+                                <div class="wrapper">
+                                    <section id="first-tab-groupSafwan1990s" class="tabgroup">
+                                    <div id="1990s-1">
+                                        <div id="_1990s1"></div>
+                                        <!-- <p>Info1</p> -->
+                                    </div>
+                                    <div id="1990s-2">
+                                        <div id="_1990s2"></div>
+                                        <!-- <p>Info2</p> -->
+                                    </div>
+                                    <div id="1990s-3">
+                                        <div id="_1990s3"></div>
+                                        <!-- <p>Info3</p> -->
+                                    </div>
+                                    <div id="1990s-4">
+                                        <div id="_1990s4"></div>
+                                        <!-- <p>Info4</p> -->
+                                    </div>
+                                    <div id="1990s-5">
+                                        <div id="_1990s5"></div>
+                                        <!-- <p>Info1</p> -->
+                                    </div>
+                                    <div id="1990s-6">
+                                        <div id="_1990s6"></div>
+                                        <!-- <p>Info2</p> -->
+                                    </div>
+                                    <div id="1990s-7">
+                                        <div id="_1990s7"></div>
+                                        <!-- <p>Info3</p> -->
+                                    </div>
+                                    <div id="1990s-8">
+                                        <div id="_1990s8"></div>
+                                        <!-- <p>Info4</p> -->
+                                    </div>
+                                    <div id="1990s-9">
+                                        <div id="_1990s9"></div>
+                                        <!-- <p>Info1</p> -->
+                                    </div>
+                                    <div id="1990s-10">
+                                        <div id="_1990s10"></div>
+                                        <!-- <p>Info2</p> -->
+                                    </div>
+                                    <div id="1990s-11">
+                                        <div id="_1990s11"></div>
+                                        <!-- <p>Info3</p> -->
+                                    </div>
+                                    <div id="1990s-12">
+                                        <div id="_1990s12"></div>
+                                        <!-- <p>Info4</p> -->
+                                    </div>
+                                    </section>
+                                    <ul class="tabs clearfix" data-tabgroup="first-tab-groupSafwan1990s">
+                                    <li><a href="#1990s-1" class="active">January</a></li>
+                                    <li><a href="#1990s-2">February</a></li>
+                                    <li><a href="#1990s-3">March</a></li>
+                                    <li><a href="#1990s-4">April</a></li>
+                                    <li><a href="#1990s-5">May</a></li>
+                                    <li><a href="#1990s-6">June</a></li>
+                                    <li><a href="#1990s-7">July</a></li>
+                                    <li><a href="#1990s-8">August</a></li>
+                                    <li><a href="#1990s-9">September</a></li>
+                                    <li><a href="#1990s-10">October</a></li>
+                                    <li><a href="#1990s-11">November</a></li>
+                                    <li><a href="#1990s-12">December</a></li>
+                                    </ul>
+                                    </div>
+                                <!-- <p>Info1</p> -->
+                            </div>
+                            <div id="Year2000sTab">
+                                <div class="wrapper">
+                                    <section id="first-tab-groupSafwan2000s" class="tabgroup">
+                                    <div id="2000s-1">
+                                        <div id="_2000s1"></div>
+                                        <!-- <p>Info1</p> -->
+                                    </div>
+                                    <div id="2000s-2">
+                                        <div id="_2000s2"></div>
+                                        <!-- <p>Info2</p> -->
+                                    </div>
+                                    <div id="2000s-3">
+                                        <div id="_2000s3"></div>
+                                        <!-- <p>Info3</p> -->
+                                    </div>
+                                    <div id="2000s-4">
+                                        <div id="_2000s4"></div>
+                                        <!-- <p>Info4</p> -->
+                                    </div>
+                                    <div id="2000s-5">
+                                        <div id="_2000s5"></div>
+                                        <!-- <p>Info1</p> -->
+                                    </div>
+                                    <div id="2000s-6">
+                                        <div id="_2000s6"></div>
+                                        <!-- <p>Info2</p> -->
+                                    </div>
+                                    <div id="2000s-7">
+                                        <div id="_2000s7"></div>
+                                        <!-- <p>Info3</p> -->
+                                    </div>
+                                    <div id="2000s-8">
+                                        <div id="_2000s8"></div>
+                                        <!-- <p>Info4</p> -->
+                                    </div>
+                                    <div id="2000s-9">
+                                        <div id="_2000s9"></div>
+                                        <!-- <p>Info1</p> -->
+                                    </div>
+                                    <div id="2000s-10">
+                                        <div id="_2000s10"></div>
+                                        <!-- <p>Info2</p> -->
+                                    </div>
+                                    <div id="2000s-11">
+                                        <div id="_2000s11"></div>
+                                        <!-- <p>Info3</p> -->
+                                    </div>
+                                    <div id="2000s-12">
+                                        <div id="_2000s12"></div>
+                                        <!-- <p>Info4</p> -->
+                                    </div>
+                                    </section>
+                                    <ul class="tabs clearfix" data-tabgroup="first-tab-groupSafwan2000s">
+                                    <li><a href="#2000s-1" class="active">January</a></li>
+                                    <li><a href="#2000s-2">February</a></li>
+                                    <li><a href="#2000s-3">March</a></li>
+                                    <li><a href="#2000s-4">April</a></li>
+                                    <li><a href="#2000s-5">May</a></li>
+                                    <li><a href="#2000s-6">June</a></li>
+                                    <li><a href="#2000s-7">July</a></li>
+                                    <li><a href="#2000s-8">August</a></li>
+                                    <li><a href="#2000s-9">September</a></li>
+                                    <li><a href="#2000s-10">October</a></li>
+                                    <li><a href="#2000s-11">November</a></li>
+                                    <li><a href="#2000s-12">December</a></li>
+                                    </ul>
+                                    </div>
+                                <!-- <p>Info1</p> -->
+                            </div>
+                            <div id="Year2010sTab">
+                                <div class="wrapper">
+                                    <section id="first-tab-groupSafwan2010s" class="tabgroup">
+                                    <div id="2010s-1">
+                                        <div id="_2010s1"></div>
+                                        <!-- <p>Info1</p> -->
+                                    </div>
+                                    <div id="2010s-2">
+                                        <div id="_2010s2"></div>
+                                        <!-- <p>Info2</p> -->
+                                    </div>
+                                    <div id="2010s-3">
+                                        <div id="_2010s3"></div>
+                                        <!-- <p>Info3</p> -->
+                                    </div>
+                                    <div id="2010s-4">
+                                        <div id="_2010s4"></div>
+                                        <!-- <p>Info4</p> -->
+                                    </div>
+                                    <div id="2010s-5">
+                                        <div id="_2010s5"></div>
+                                        <!-- <p>Info1</p> -->
+                                    </div>
+                                    <div id="2010s-6">
+                                        <div id="_2010s6"></div>
+                                        <!-- <p>Info2</p> -->
+                                    </div>
+                                    <div id="2010s-7">
+                                        <div id="_2010s7"></div>
+                                        <!-- <p>Info3</p> -->
+                                    </div>
+                                    <div id="2010s-8">
+                                        <div id="_2010s8"></div>
+                                        <!-- <p>Info4</p> -->
+                                    </div>
+                                    <div id="2010s-9">
+                                        <div id="_2010s9"></div>
+                                        <!-- <p>Info1</p> -->
+                                    </div>
+                                    <div id="2010s-10">
+                                        <div id="_2010s10"></div>
+                                        <!-- <p>Info2</p> -->
+                                    </div>
+                                    <div id="2010s-11">
+                                        <div id="_2010s11"></div>
+                                        <!-- <p>Info3</p> -->
+                                    </div>
+                                    <div id="2010s-12">
+                                        <div id="_2010s12"></div>
+                                        <!-- <p>Info4</p> -->
+                                    </div>
+                                    </section>
+                                    <ul class="tabs clearfix" data-tabgroup="first-tab-groupSafwan2010s">
+                                    <li><a href="#2010s-1" class="active">January</a></li>
+                                    <li><a href="#2010s-2">February</a></li>
+                                    <li><a href="#2010s-3">March</a></li>
+                                    <li><a href="#2010s-4">April</a></li>
+                                    <li><a href="#2010s-5">May</a></li>
+                                    <li><a href="#2010s-6">June</a></li>
+                                    <li><a href="#2010s-7">July</a></li>
+                                    <li><a href="#2010s-8">August</a></li>
+                                    <li><a href="#2010s-9">September</a></li>
+                                    <li><a href="#2010s-10">October</a></li>
+                                    <li><a href="#2010s-11">November</a></li>
+                                    <li><a href="#2010s-12">December</a></li>
+                                    </ul>
+                                    </div>
+                                <!-- <p>Info1</p> -->
+                            </div>
+                        <!-- </div> -->
+                    </section>
+                    </div>
+            </div>
+        </div>
+        <div class="row" style="justify-content: space-around; padding-top: 50px;">
+            <div class="service-item">
+                <h4>The Trend of Australia’s Climate</h4>
+                <div class="line-dec"></div>
+                <p>A common problem that is brought up in today’s world is climate change. There have been many debates as to if climate change exists. If you look at the data provided, you can see that over time, climate change does exist. Now for this analysis, I will refer to the data that specifically references temperature change in December as it is easier to see and notice a trend. During the 1980s and 1990s, there seems does not seem to be a consistent increase in temperature. In those two decades, there were decreases in temperature from the beginning to the end of the respective decades. In the 2000s, however, there was a slight increase in temperature from the beginning to end of the decade, which lead up to the 2010s. In the 2010s there was a steady increase in temperature and a significant one as the decade started at 26.1 degrees Celsius and ended with 29.6 degrees Celsius. Many would wonder: why is this a problem? or what does this have to do with hunger?</p>
+            </div>
+        </div>
+        <div class="row" style="justify-content: space-around;">
+            <div class="service-item">
+                <h4>Climate Change Effect on Hunger</h4>
+                <div class="line-dec"></div>
+                <p>If you look at the agricultural productivity visuals, you can see that the previously highlighted trend in climate correlates with the productivity of growing agriculture.
+                    <br><br>Note: The data refers a to TFP, which is total factor productivity. TFP is essentially the measure of productivity given total production (Output) divided by average input. When the TFP is high, it means that the productivity is strong and that more is being grown, but a lower TFP means less productivity and therefore less growth. The TFP is also calculated using the total-factor productivity and labor input, but those are not shown in the data. The given input and output had a direct relationship to the TFP, so it is enough to notice a trend in it.
+                    <br>In the climate change data, we saw that in the 1980s and 1990s, the climate decreased in temperature when looking at the change throughout the decades during the month of December. The TFP data of the 80s and 90s, with respect to cows (beef) as the agriculture, show and upward trend in productivity, which shows a relationship with the change in climate. A slight decrease in temperature shows an increase in the productivity of beef. This is further proven when looking at the 2000s and 2010s decades as 2000s has a slight increase in temperature and the TFP still increased but not by much, but in the 2010s, when the temperature was drastically increased, the TFP significantly decrease. As the temperature change increases, the productivity of agriculture like beef decreases, which means if the temperature continues to increase, the production can continue to decrease. While this decrease is not enough to cause hunger in the present, if this continues to be a trend for the decades to come, there could be less agriculture/livestock for people to eat.
+                    <br><br>Note: While the description above takes into account the information in terms of December, you can see a relatively similar trend in the other months as well. The reason December is talked about specifically is because December is considered one of the colder month, so to see an increase in temperature in a cold month makes the increase much more significant in that perspective.    
+                </p>
+            </div>
+        </div>
+        <div class="row" style="justify-content: space-around; padding-top: 50px;">
+            <!-- Empty space -->
+        </div>
+    </div>
+</div>
+
+<!-- *** VISUALIZATION 3 *** -->
+<div class="parallax-content visual3-content" id="Visualization-3">
+    <h1 class="mb-4 section-title">How has climate change affected wheat yields in different regions of Australia?</h1>
+    <div class="container">
+        <div class="row" style="justify-content: space-around;">
+            <div class="col-md-6" style="max-width: 100%;">
+                <div class="service-item" style="background-color: rgb(255 255 255 / 80%) !important;">
+                    <div id="main" style="width: 900px; height:600px;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="justify-content: space-around;">
+            <div class="service-item">
+                <h4>Climate Change Effect on Wheat Production:</h4>
+                <div class="line-dec"></div>
+                <p>This question connects to Safwan's question, because Australia not only produces beef, but it is also one of the largest producers and exporters of wheat in the world. According to ABARES, wheat production in Australia accounts for 55% of the total agricultural land, wheat is grown on more than half of Australia's cropland making it one of the most important crops produced in Australia. This means that changes in wheat production can have a big impact on global food security, including the lives of farmers.
+                    Global food security requires that grain yields continue to increase for the next 30 years, but many yields have stalled in many developed countries. There are many factors contributing this challenge and climate change can be one of them. For this reason, it is important to investigate how climate change has been affecting the yearly production of wheat in different regions of Australia. In the map above we can see the effects of climate change on wheat production from 1978-2015.
+                </p>
+                <h4>Findings:</h4>
+                <div class="line-dec"></div>
+                <p>After analyzing the map above we see that in 1978 most regions of southeast Queensland and New South Wales were heavily impacted by climate change. The regions of Maranoa and Walgett were affected by 2%. This might not seem much, but it is a significant change from last year’s percent. In 1983, the impact of climate change for almost all regions of New South Wales and Victoria decreased, but the following year the percent impact increased rapidly.  This suggest that variations in climate change can have an immediate effect on wheat crops.
+                    From 1983-1998 we didn't have any significant changes, until 1999 when regions located in the center of Queensland and New South Wales were heavily affected by climate change. From 2000-2003 the impact of climate change decreased in almost all regions of Australia.
+                    From 2003-2015 the year most heavily impacted by climate change was in 2011. The Southern regions of Queensland and all wheat farms in New South Wales were heavily affected, including the regions of Brewarrina, Wentworth, Balranald, Cobar, Walgett, Coonamble, Bogan, Warren, Lachlan, and Hay. On the other hand, the majority of wheat farms in the Western Australia were hardly impacted by climate change.
+                    </p>
+            </div>
+        </div>
+        <div class="row">
+            <!-- vis 2 -->
+            <div class="col-md-6" style="max-width: 33%;">
+                <div id="includedContent"></div>
+            </div>
+        </div>
+        <div class="row" style="justify-content: space-around;">
+            <div class="service-item">
+                <!-- <h4>Climate Change Effect on Hunger</h4> -->
+                <div class="line-dec"></div>
+                <p>The above Principal Component Analysis compares different years of climate change effect on wheat production from different regions. Looking at PCA1 and PCA2 which have the highest variance we don’t see any clusters of points or any clear separation between the different years, meaning there is no special relationship between the different years of climate change effect on wheat production. This suggests that over the years there is high climate variability in different regions of Australia.</p>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="container">
+        <div class="row">
+        <div class="col-md-6" style="max-width: 33%;">
+            <div id="includedContent"></div>
+        </div>
+    </div>
+    <div class="row" style="justify-content: space-around; padding-top: 50px;">
+        <div class="service-item" style="width: 735px;">
+            <h4>How does the FTP from different regions in Australia compare to each other? </h4>
+            <div class="line-dec"></div>
+            <p>The above Principal Component Analysis compares the Total productivity of different industries from different regions in Australia. Overall, we can don't We don’t see any clusters of points, which indicates that there is no clear correlation or relationship between the FTP of different regions. An explanation for this results is that most regions are so far away from each other due to the size of Australia, which suggest that climate change affect different regions differently. Dry regions in Australia will have different FTP compared to regions in Australia where is more humid.</p>
+        </div>
+    </div>
+    </div> -->
+</div>
+
+<!-- *** VISUALIZATION 4 *** -->
+<div class="visual4-content" id="Visualization-4">
+    <h1 class="mb-4 section-title">Do the variations of the surface air and sea surface temperatures affect the TFP?</h1>
+    <div class="container">
+
+        <div class="row" style="justify-content: space-around; padding-top: 50px;">
+            <div class="service-item">
+                <!-- <h4>The Trend of Australia’s Climate</h4> -->
+                <div class="line-dec"></div>
+                <p>Before we find relationships if there are any, we want to be curious to see between the ‘Pie chart’ and the ‘Line chart’, which one will help us better determine the year in which we have more TFP. These are our findings:</p>
+            </div>
+        </div>
+        <div class="row">
+            <!-- vis 1 -->
+            <div class="col-md-6" style="max-width: 33%;">
+                <div id="IdeVis4"></div>
+            </div>
+            <!-- vis 1 -->
+            <div class="col-md-6" style="max-width: 33%;">
+                <div id="IdeVis5"></div>
+            </div>
+        </div>
+        <div class="row" style="justify-content: space-around; padding-top: 50px;">
+            <div class="service-item">
+                <!-- <h4>The Trend of Australia’s Climate</h4> -->
+                <div class="line-dec"></div>
+                <p>In our actual case we see it difficult to read the Pie chart vs easy to read the Line chart and the year of more TFP is 2011-12. Our curiosity is then satisfied.</p>
+            </div>
+        </div>
+
+
+        <div class="row" style="justify-content: space-around; padding-top: 50px;">
+            <div class="service-item">
+                <!-- <h4>The Trend of Australia’s Climate</h4> -->
+                <div class="line-dec"></div>
+                <p>As we talk about the climate change, it is convenient to analyze the anomalies in see-surface temperatures and surface air temperatures in the same Australia region. We will then observe what is the relationship between these variations and the data of the overall productivity in cropping over the period of 1977 to 2012.</p>
+                <p>For the data, we collected two different data from two different sources that we cleared and matched based on the time (year).</p>
+                <p>To find the different relationship that we want, we use the scatter plot visualization.</p>
+                <p>Let start by observing the relationship between the input, the output and the TFP (Total Productivity Factor) in Australia from the year 1977-78 to year 2011-12.</p>
+            </div>
+        </div>
+        <!-- VISROW 1 -->
+        <div class="row">
+                <!-- vis 1 -->
+            <div class="col-md-6" style="max-width: 33%;">
+                <div id="IdeVis1"></div>
+            </div>
+        </div>
+        <div class="row" style="justify-content: space-around; padding-top: 50px;">
+            <div class="service-item">
+                <!-- <h4>The Trend of Australia’s Climate</h4> -->
+                <div class="line-dec"></div>
+                <p>From the image, we see that there is no direct relationship between the Input and the TFP. We are saying that because the dots are all over the place. For the relation between the input and the output, we can say that it exists, but it is not strong. We see that for most of the time, when the input increases, the output also increases. We have the same argument when it comes to what is the relationship between the output and TFP. The increase of the output also shows an increase in the TFP. </p>
+            </div>
+        </div>
+        <div class="row" style="justify-content: space-around; padding-top: 50px;">
+            <div class="service-item">
+                <!-- <h4>The Trend of Australia’s Climate</h4> -->
+                <div class="line-dec"></div>
+                <p>Using the same method, let us find if there is a relationship between the variations of the see surface temperatures and those of the surface air.</p>
+            </div>
+        </div>
+        <!-- VISROW 2 -->
+        <div class="row">
+            <!-- vis 2 -->
+            <div class="col-md-6" style="max-width: 33%;">
+                <!-- vis 1 -->
+                <div class="col-md-6" style="max-width: 33%;">
+                    <div id="IdeVis2"></div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="row" style="justify-content: space-around; padding-top: 50px;">
+            <div class="service-item">
+                <!-- <h4>The Trend of Australia’s Climate</h4> -->
+                <div class="line-dec"></div>
+                <p>The plot reveals that there is no relationship in between variations of the surface air temperatures vs the see surface temperatures. We ca see how dots are all over the place on the plot.</p>
+            </div>
+        </div>
+        <div class="row" style="justify-content: space-around; padding-top: 50px;">
+            <div class="service-item">
+                <!-- <h4>The Trend of Australia’s Climate</h4> -->
+                <div class="line-dec"></div>
+                <p>Now let us observe the relationship between the variations of the surface air temperature vs see surface temperature vs TFP for the period of 1977 to 2012.</p>
+            </div>
+        </div>
+        <!-- ROW 3 -->
+        <div class="row">
+            <!-- vis 3 -->
+            <div class="col-md-6" style="max-width: 33%;">
+                <!-- vis 1 -->
+                <div class="col-md-6" style="max-width: 33%;">
+                    <div id="IdeVis3"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="justify-content: space-around;">
+            <div class="service-item">
+                <!-- <h4>Climate Change Effect on Hunger</h4> -->
+                <div class="line-dec"></div>
+                <p>These visuals also confirm the fact that there is no relationship between the changes in temperatures of the see surface vs the surface air. Also, we can observe that there still no relationship between the variation of the TFP vs the Surface air temperature. Burt surprisingly, the is some light relationship between the variations on the see surface vs the TFP.  We can start thinking that the variation of the see surface’s temperature affect the overall TFP.</p>
+                </p>
+            </div>
+        </div>
+        <div class="row" style="justify-content: space-around; padding-top: 50px;">
+            <!-- Empty space -->
+        </div>
+    </div>
+</div>
+
+<!-- *** VISUALIZATION 5 *** -->
+<div class="parallax-content visual5-content" id="Visualization-5">
+    <h1 class="mb-4 section-title">How have droughts affected Broadacre industry in Australia?</h1>
+    <div class="container">
+        <div class="row" style="justify-content: space-around;">
+            <!-- vis 2 -->
+            <div class="col-md-6">
+                    <div id="AsmaVis1"></div>
+            </div>
+        </div>
+        <div class="row" style="justify-content: space-around;">
+            <div class="service-item">
+                <!-- <h4>Climate Change Effect on Hunger</h4> -->
+                <div class="line-dec"></div>
+                <p>Australia’s agriculture sector faces number of pressures, including climate variability, deciling terms of trade and increased international competition(ABARES). The sector is highly export oriented with two-thirds of agricultural production exported (ABARES). Therefore, remaining profitable and sustainable is an increasing challenge for Australian farmers (ABARES).</p>
+                <p>Broadacre productivity growth slowed between 1998–99 and 2004–05, in part due to drought during the 2000s. Productivity returned to growth between 2005–06 and 2011–12 before slowing down again in recent years. The slowdown in growth appears to have can be attributed to seasonal conditions, with significant downturns in drought years.</p>
+            </div>
+        </div>
+        <div class="row" style="justify-content: space-around;">
+            <!-- vis 2 -->
+            <div class="col-md-6">
+                    <div id="AsmaVis2"></div>
+            </div>
+        </div>
+        <div class="row" style="justify-content: space-around;">
+            <div class="service-item">
+                <!-- <h4>Climate Change Effect on Hunger</h4> -->
+                <div class="line-dec"></div>
+                <p>Agricultural productivity volatility is often caused by water availability, especially when drought causes water to be a limiting factor to production. In this project, the water availability will be analyzed by utilizing the average annual rainfall. The average rainfall was noticeably low in 1994, 2002. 2005 and 2019. In fact, the average annual rainfall in 2019 was in significant drought as it had the lowest precipitation level since 1978.</p>
+                </p>
+            </div>
+        </div>
+        <div class="row" style="justify-content: space-around;">
+            <!-- vis 2 -->
+            <div class="col-md-6">
+                    <div id="AsmaVis3"></div>
+            </div>
+        </div>
+        <div class="row" style="justify-content: space-around;">
+            <div class="service-item">
+                <!-- <h4>Climate Change Effect on Hunger</h4> -->
+                <div class="line-dec"></div>
+                <p>The effect of average annual rainfall on Australian broadacre TFP is evident in this chart, which demonstrates that when water is a limiting factor to production—such as during a prolonged drought-- the effect is reflected in Total Factor Productivity (ABARES). For example, productivity fell between 2017- 2020 because the average annual rainfall was decreasing during these years. This means that when drought causes water to be a limiting factor to production, the measured quantity of inputs generally falls, some cases, by less than the quantity of outputs, and so TFP falls (ABARES).</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- *** SECTION DATA SOURCES *** -->
+<div class="data-sources-content" id="data-sources">
+    <h1 class="mb-4 section-title">Data Sources</h1>
+    <div class="container">
+            <div class="row" style="justify-content: center;">
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="service-item">
+                                <h2>Australia Farm Productivity data</h2>
+                                <div class="line-dec"></div>
+                                <h4>All data</h4>
+                                <p>[contains all ABARES agricultural productivity data]</p>
+                                <!-- <a href="https://www.agriculture.gov.au/abares/research-topics/productivity/data">Agricultural Productivity Data</a> -->
+                                <a href="https://www.agriculture.gov.au/abares/research-topics/productivity/data">Australian agricultural productivity data</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="service-item">
+                                <h2>Australia Climate Data</h2>
+                                <div class="line-dec"></div>
+                                <h4>Climate Data</h4>
+                                <p>[All historical and future climate data from the Climate Change Knowledge Portal]</p>
+                                <!-- <a href="https://www.agriculture.gov.au/abares/research-topics/productivity/data">Agricultural Productivity Data</a> -->
+                                <a href="https://climateknowledgeportal.worldbank.org/download-data">climateknowledgeportal.worldbank</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- *** SECTION TEAM *** -->
+    <div class="parallax-content team-content" id="team">
+        <h1 class="mb-4 section-title">Our Team</h1>
+          <div class="container">
+            <div class="container mt-100 mt-60">
+                <div class="row" style="justify-content:center;">
+                    <div class="col-lg-2 col-md-6 col-12 mt-4 pt-2">
+                        <div class="mt-4 pt-2">
+                            <div class="team position-relative d-block text-center">
+                                <div class="image position-relative d-block overflow-hidden">
+                                    <!-- <img src="https://clinicforspecialchildren.org/wp-content/uploads/2016/08/avatar-placeholder.gif" class="img-fluid rounded" alt=""> -->
+                                    <div class="overlay rounded bg-dark"></div>
+                                </div>
+                                <div class="content py-2 member-position bg-white border-bottom overflow-hidden rounded d-inline-block">
+                                    <h4 class="title mb-0">Gabriel Espinoza</h4>
+                                    <small class="text-muted"></small>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                    
+                    <div class="col-lg-2 col-md-6 col-12 mt-4 pt-2">
+                        <div class="mt-4 pt-2">
+                            <div class="team position-relative d-block text-center">
+                                <div class="image position-relative d-block overflow-hidden">
+                                    <!-- <img src="https://clinicforspecialchildren.org/wp-content/uploads/2016/08/avatar-placeholder.gif" class="img-fluid rounded" alt=""> -->
+                                    <div class="overlay rounded bg-dark"></div>
+                                </div>
+                                <div class="content py-2 member-position bg-white border-bottom overflow-hidden rounded d-inline-block">
+                                    <h4 class="title mb-0">Safwan Shahid</h4>
+                                    <small class="text-muted"></small>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                    
+                    <div class="col-lg-2 col-md-6 col-12 mt-4 pt-2">
+                        <div class="mt-4 pt-2">
+                            <div class="team position-relative d-block text-center">
+                                <div class="image position-relative d-block overflow-hidden">
+                                    <!-- <img src="https://clinicforspecialchildren.org/wp-content/uploads/2016/08/avatar-placeholder.gif" class="img-fluid rounded" alt=""> -->
+                                    <div class="overlay rounded bg-dark"></div>
+                                </div>
+                                <div class="content py-2 member-position bg-white border-bottom overflow-hidden rounded d-inline-block">
+                                    <h4 class="title mb-0">Ide Tafaba Tchapouh</h4>
+                                    <small class="text-muted"></small>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+            
+                            <div class="col-lg-2 col-md-6 col-12 mt-4 pt-2">
+                        <div class="mt-4 pt-2">
+                            <div class="team position-relative d-block text-center">
+                                <div class="image position-relative d-block overflow-hidden">
+                                    <!-- <img src="https://clinicforspecialchildren.org/wp-content/uploads/2016/08/avatar-placeholder.gif" class="img-fluid rounded" alt=""> -->
+                                    <div class="overlay rounded bg-dark"></div>
+                                </div>
+                                <div class="content py-2 member-position bg-white border-bottom overflow-hidden rounded d-inline-block">
+                                    <h4 class="title mb-0">Asma Sadia</h4>
+                                    <small class="text-muted"></small>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                    
+                    <div class="col-lg-2 col-md-6 col-12 mt-4 pt-2">
+                        <div class="mt-4 pt-2">
+                            <div class="team position-relative d-block text-center">
+                                <div class="image position-relative d-block overflow-hidden">
+                                    <!-- <img src="https://clinicforspecialchildren.org/wp-content/uploads/2016/08/avatar-placeholder.gif" class="img-fluid rounded" alt=""> -->
+                                    <div class="overlay rounded bg-dark"></div>
+                                </div>
+                                <div class="content py-2 member-position bg-white border-bottom overflow-hidden rounded d-inline-block">
+                                    <h4 class="title mb-0">Ming Hin Cheung</h4>
+                                    <small class="text-muted"></small>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+
+                </div><!--end row-->
+            </div>
+        </div>
+      </div>
+
+
+    <footer>
+        <!-- EMPTY FOOTER -->
+    </footer>
+
+
+
+    <script 
+    src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        function openCity(cityName) {
+            var i;
+            var x = document.getElementsByClassName("city");
+            for (i = 0; i < x.length; i++) {
+               x[i].style.display = "none";  
+            }
+            document.getElementById(cityName).style.display = "block";  
+        }
+    </script>
+
+    <script>
+        $(document).ready(function(){
+          // Add smooth scrolling to all links
+          $(".fixed-side-navbar a, .primary-button a").on('click', function(event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+
+              // Store hash
+              var hash = this.hash;
+
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 800, function(){
+           
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              });
+            } // End if
+          });
+        });
+    </script>
+    <!-- <script src="vis1.js"></script> -->
+    <!-- <script src="vis2.js"></script> -->
+    <script src="SafwanVisuals.js"></script>
+    <script src="SafwanVisuals2.js"></script>
+    <script src="MingVisuals.js"></script>
+    <script src="MingVisuals2.js"></script>
+    <script src="IdeVisuals.js"></script>
+    <script src="IdeVisuals2.js"></script>
+    <script src="GabrielMap.js"></script>
+
+</body>
+</html>
